@@ -1,0 +1,329 @@
+body {
+  background-color: beige;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* @media (max-width: 768px) {
+        /* Stili per dispositivi mobili 
+        .navbar {
+          display: none;
+        }
+      } */
+
+/* @media (width <= 992px) {
+        /* Stili per desktop 
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.3);
+            position: relative;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+        }
+        .dropdown-menu{
+            z-index: 100;
+        }
+        .nav-item{
+            z-index: 0;
+        }    
+      } */
+
+.banner {
+  position: relative;
+  background: url("bannerverde2.jpg") no-repeat center center;
+  background-size: cover;
+  height: 350px;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: 0;
+  /* width: 100%; */
+  z-index: 10;
+}
+
+.dropdown-menu {
+  z-index: 1000;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.bi-instagram:hover {
+  color: #c13584 !important;
+}
+
+.bi-youtube:hover {
+  color: red !important;
+}
+
+.bi-linkedin:hover {
+  color: #0078c7 !important;
+}
+
+.bi-facebook:hover {
+  color: blue;
+}
+
+.dropdown-item:active {
+  background-color: forestgreen;
+}
+/*     
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+      
+      @media (min-width: 768px) { 
+        header {
+          position: static;
+        }
+      } */
+/* .navbar-brand {
+        color: black !important;
+    }
+    
+    .navbar-brand:hover {
+        color: #0056b3 !important;
+    } */
+
+/* .carousel-inner{
+        display: grid;
+        /* justify-content: flex-start; */
+/* grid-template-columns: 1fr;
+        margin-left: 10px;
+    } */
+
+/* .carousel-item{
+        width: 50%;
+    } */
+/* Posiziona le frecce di navigazione */
+/* .carousel-control-prev,
+.carousel-control-next {
+  width: 50px; /* Larghezza delle frecce 
+  height: 50px; /* Altezza delle frecce 
+  top: 35%; /* Posiziona le frecce a metà dell'altezza del carosello 
+  transform: translateY(
+    -50%
+  ); /* Sposta le frecce di metà della loro altezza per centrarle verticalmente 
+} */
+
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Colore di sfondo semi-trasparente 
+  width: 50px; /* Larghezza 
+  height: 50px; /* Altezza 
+} */
+
+/* Contenitore del carosello */
+/* .carousel {
+  width: 100% !important;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  position: relative; /* Assicura che il carosello abbia una posizione relativa 
+} */
+
+/* Immagini del carosello */
+/* .carousel-item img {
+  height: 100%; /* L'immagine riempie l'altezza del carosello 
+  width: 100%; /* L'immagine riempie la larghezza del carosello 
+  object-fit: cover; /* Mantiene le proporzioni corrette dell'immagine e riempie l'intero contenitore 
+}
+
+/* Altezza del carosello 
+.carousel-inner {
+  height: 100vh; /* Imposta un'altezza fissa basata sulla dimensione della prima immagine 
+}
+
+.carousel-indicators {
+  bottom: 15em; /* Posiziona gli indicatori vicino al fondo per dispositivi medi 
+} */
+
+.card {
+  margin: 10px;
+  border-radius: 10px !important;
+  overflow: hidden; /* Assicura che il contenuto della card non esca dai bordi arrotondati */
+}
+
+.card-img-top {
+  object-fit: cover;
+  object-position: 50% 50%;
+  height: 300px;
+  /* width: 100%; 
+        height: 300px; /* Imposta l'altezza desiderata 
+        object-fit: fill; /* Adatta l'immagine senza distorcerla 
+        border-top-left-radius: 10px !important; */
+}
+
+.news-card {
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-card img {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-card:hover img {
+  transform: scale(1.05);
+}
+
+.news-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .btn {
+  margin-top: auto;
+  background-color: #007b5e;
+  border-color: #007b5e;
+}
+
+.card .btn:hover {
+  background-color: #005f46;
+  border-color: #005f46;
+}
+
+.footer .nav-link {
+  margin-left: 20px; /* Aggiunge spazio tra le icone */
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 600px;
+  margin: 40px auto;
+}
+
+.form-container form {
+  width: 100%;
+}
+
+.form-container.form-group {
+  margin-bottom: 20px;
+}
+
+.form-container.btn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-control:focus {
+  box-shadow: 5px 5px forestgreen;
+  border-color: #005f46;
+}
+
+hr {
+  border-top: 2px solid forestgreen; /* Colore rosso */
+  margin: 20px; /* Margine sopra e sotto */
+}
+
+.form-check-input {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000; /* Change the color and thickness of the border */
+  background-color: transparent; /* Sfondo trasparente */
+  appearance: none; /* Rimuove lo stile predefinito */
+  position: relative;
+  cursor: pointer;
+  outline: none; /* Rimuove il contorno */
+  box-shadow: none; /* Rimuove eventuali ombre */
+}
+
+.form-check-input:checked {
+  background-color: #28a745; /* Colore verde per l'input selezionato */
+  border-color: black;
+}
+
+.form-check-input:focus,
+.form-check-input:active {
+  outline: none; /* Rimuove il contorno */
+  box-shadow: none; /* Rimuove eventuali ombre */
+  border-color: #000;
+}
+
+.question-category {
+  margin-top: 1rem;
+}
+
+select {
+  margin-bottom: 1rem;
+}
+
+/* Tooltip container 
+     .tooltip-container {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    } */
+
+.tooltip-trigger {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tooltip-trigger:hover {
+  color: darkblue;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+.password-container input {
+  width: 100%;
+  padding-right: 2.5rem; /* Spazio per l'icona */
+}
+.password-container .bi {
+  position: absolute;
+  right: 0.5rem;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* .ul{
+        margin-left: 42%;
+    } */
+
+/* .messages {
+        margin-bottom: 1rem; /* Aggiunge uno spazio sotto i messaggi 
+    }
+    
+    /* Aggiungi margine inferiore al form-container per garantire spazio sufficiente 
+    .form-container {
+        margin-bottom: 2rem;
+    }
+    
+    /* Stile per i messaggi di errore e successo 
+    .alert {
+        margin-bottom: 1rem;
+    } */
+
+/* #score-container {
+        font-size: 30px;
+        font-weight: bold;
+        color: Black;
+      } */
+/* .hidden {
+        display: none;
+      } */

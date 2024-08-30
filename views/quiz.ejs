@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="icon" type="image/x-icon" href="greenvisalogo.png"/>
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+      crossorigin="anonymous"
+      />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->  
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:4000/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div class="form-container">
+        <div class="quiz-container">
+          <h1>GREEN VISA – PROTOCOLLO TRASPORTI</h1>
+          <p>I criteri individuati mirano a limitare i principali impatti ambientali connessi alle caratteristiche fondamentali dell’attività che si sta procedendo a certificare. 
+            Per quest’area d’analisi le tematiche analizzate saranno quelle relative a:</p>
+            <ul>
+                <li>Indicazione del sistema di trasporto</li>                
+                <li>Numero di mezzi da certificare</li>
+                <li>Utilizzo dei mezzi</li>
+                <li>Conferma del rispetto delle norme in riferimento alla gestione del mezzo (revisioni, assicurazioni, bolli, tagliandi)</li>
+            </ul>
+            <hr>
+          <form id="quizForm" method="POST" action="/submit">
+            <div class="form-group">
+              <h6>Quali tipologie di mezzi di trasporto ha la sua attività?</h6>
+              <div id="question1" class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="100" id="q1_a1" name="autobus">
+                  <label class="form-check-label" for="q1_a1">Autobus</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="90" id="q1_a2" name="minibus">
+                  <label class="form-check-label" for="q1_a2">Minibus</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="85" id="q1_a3" name="autovetture">
+                  <label class="form-check-label" for="q1_a3">Autovetture</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="80" id="q1_a4" name="autovetture">
+                  <label class="form-check-label" for="q1_a4">Autovetture cabrio</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="90" id="q1_a5" name="scooter">
+                  <label class="form-check-label" for="q1_a5">Scooter</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="85" id="q1_a6" name="moto">
+                    <label class="form-check-label" for="q1_a6">Moto</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="100" id="q1_a7" name="biciclette">
+                    <label class="form-check-label" for="q1_a7">Biciclette</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="65" id="q1_a8" name="trasporto_acqua">
+                    <label class="form-check-label" for="q1_a8">Trasporto su acqua</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+                <h6>In che anno sono stati immatricolati i mezzi sopra descritti?</h6>
+                <div id="question2" class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="100" id="q2_a1" name="anno">
+                    <label class="form-check-label" for="q2_a1">2024</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="95" id="q2_a2" name="anno">
+                    <label class="form-check-label" for="q2_a2">2023</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="90" id="q2_a3" name="anno">
+                    <label class="form-check-label" for="q2_a3">2022</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="85" id="q2_a4" name="anno">
+                    <label class="form-check-label" for="q2_a4">2021</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="80" id="q2_a5" name="anno">
+                    <label class="form-check-label" for="q2_a5">2020</label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="50" id="q2_a6" name="anno">
+                      <label class="form-check-label" for="q2_a6">Prima del 2020</label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="25" id="q2_a7" name="anno">
+                      <label class="form-check-label" for="q2_a7">Prima del 2010</label>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h6>I mezzi che sta certificando rientrano nella macro area di emissioni, denominata euro?</h6>
+                <div id="question3" class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="100" id="q3_a1" name="euro">
+                    <label class="form-check-label" for="q3_a1">Euro 6</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="75" id="q3_a2" name="euro">
+                    <label class="form-check-label" for="q3_a2">Euro 5</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="50" id="q3_a3" name="euro">
+                    <label class="form-check-label" for="q3_a3">Euro 4</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="0" id="q3_a4" name="euro">
+                    <label class="form-check-label" for="q3_a4">Euro 3</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="0" id="q3_a5" name="euro">
+                    <label class="form-check-label" for="q3_a5">Euro 2</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h6>I mezzi di trasporto che sta certificando quanto Km l’anno percorrono?</h6>
+                <div id="question4" class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="100" id="q4_a1" name="km">
+                    <label class="form-check-label" for="q4_a1">Da 1000 a 10000 Km</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="50" id="q4_a2" name="km">
+                    <label class="form-check-label" for="q4_a2">Da 10000 a 20000 Km</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="25" id="q4_a3" name="km">
+                    <label class="form-check-label" for="q4_a3">Da 20000 a 50000 Km</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="10" id="q4_a4" name="km">
+                    <label class="form-check-label" for="q4_a4">Più di 50000 Km</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h6>Conferma il rispetto delle norme vigenti in merito alla gestione, manutenzione e assicurazione dei mezzi che sta certificando?</h6>
+                <div id="question5" class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="100" id="q5_a1" name="norme">
+                    <label class="form-check-label" for="q5_a1">Si</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="0" id="q5_a1" name="norme">
+                    <label class="form-check-label" for="q5_a1">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h6>Indichi la data dell’ultima revisione fatta ai mezzi che sta certificando</h6>
+                <div id="question6" class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="100" id="q6_a1" name="bollino">
+                    <label class="form-check-label" for="q6_a1">2024</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="90" id="q6_a2" name="bollino">
+                    <label class="form-check-label" for="q6_a2">2023</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="85" id="q6_a3" name="bollino">
+                    <label class="form-check-label" for="q6_a3">2022</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="80" id="q6_a4" name="bollino">
+                    <label class="form-check-label" for="q6_a4">2021</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="70" id="q6_a5" name="bollino">
+                    <label class="form-check-label" for="q6_a5">2020</label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="35" id="q6_a6" name="bollino">
+                      <label class="form-check-label" for="q6_a6">Prima del 2020</label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="15" id="q6_a7" name="bollino">
+                      <label class="form-check-label" for="q6_a7">Prima del 2010</label>
+                  </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                <h6>I mezzi che sta certificando, possegono il <span class="tooltip-trigger" data-toggle="tooltip" data-placement="top" title="Si tratta del bollino che viene rilasciato al momento della revisione">bollino blu</span>?</h6>
+                <div id="question7" class="mb-3">                
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="100" id="q7_a1" name="bollino">
+                    <label class="form-check-label" for="q7_a1">Si</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="50" id="q7_a2" name="bollino">
+                    <label class="form-check-label" for="q7_a2">Alcuni</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="0" id="q7_a3" name="bollino">
+                    <label class="form-check-label" for="q7_a3">No</label>
+                  </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                <h6>Indichi la tipologia di alimentazione dei mezzi in esame</h6>
+                <div class="question-category" id="1">
+                    <u>Autobus:</u>
+                    <div class="form-check">    
+                        <input class="form-check-input" type="radio" value="100" id="autobus_elettrico" name="autobus" disabled>
+                        <label class="form-check-label" for="autobus_elettrico">Elettrico</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="80" id="autobus_ibrido" name="autobus" disabled>
+                        <label class="form-check-label" for="autobus_ibrido">Ibrido</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="65" id="autobus_tradizionale" name="autobus" disabled>
+                        <label class="form-check-label" for="autobus_tradizionale">Tradizionale BENZINA</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="35" id="autobus_diesel" name="autobus" disabled>
+                        <label class="form-check-label" for="autobus_diesel">Diesel</label>
+                    </div>
+                </div>
+                <div class="question-category" id="2">
+                    <u>Minibus:</u>
+                    <div class="form-check">    
+                        <input class="form-check-input" type="radio" value="100" id="minibus_elettrico" name="minibus" disabled>
+                        <label class="form-check-label" for="minibus_elettrico">Elettrico</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="80" id="minibus_ibrido" name="minibus" disabled>
+                        <label class="form-check-label" for="minibus_ibrido">Ibrido</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="65" id="minibus_tradizionale" name="minibus" disabled>
+                        <label class="form-check-label" for="minibus_tradizionale">Tradizionale BENZINA</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="35" id="minibus_diesel" name="minibus" disabled>
+                        <label class="form-check-label" for="minibus_diesel">Diesel</label>
+                    </div>
+                </div>
+                <div class="question-category" id="3">
+                    <u>Trasporto con Autovetture:</u>
+                    <div class="form-check">    
+                        <input class="form-check-input" type="radio" value="100" id="autovetture_elettrico" name="autovetture">
+                        <label class="form-check-label" for="autovetture_elettrico">Elettrico</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="80" id="autovetture_ibrido" name="autovetture">
+                        <label class="form-check-label" for="autovetture_ibrido">Ibrido</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="65" id="autovetture_tradizionale" name="autovetture">
+                        <label class="form-check-label" for="autovetture_tradizionale">Tradizionale BENZINA</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="35" id="autovetture_diesel" name="autovetture">
+                        <label class="form-check-label" for="autovetture_diesel">Diesel</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" value="85" id="autovetture_diesel" name="autovetture">
+                      <label class="form-check-label" for="autovetture_diesel">Servizio carpool</label>
+                    </div>
+                </div>
+                <div class="question-category" id="4">
+                    <u>Trasporto con scooter:</u>
+                    <div class="form-check">    
+                        <input class="form-check-input" type="radio" value="100" id="scooter_elettrico" name="scooter">
+                        <label class="form-check-label" for="autovetture_elettrico">Elettrico</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="80" id="scooter_ibrido" name="scooter">
+                        <label class="form-check-label" for="autovetture_ibrido">Ibrido</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="5" id="scooter_tradizionale" name="scooter">
+                        <label class="form-check-label" for="autovetture_tradizionale">Miscela</label>
+                    </div>
+                </div>
+                <div class="question-category" id="5">
+                    <u>Trasporto con biciclette:</u>
+                    <div class="form-check">    
+                        <input class="form-check-input" type="radio" value="75" id="scooter_elettrico" name="biciclette">
+                        <label class="form-check-label" for="autovetture_elettrico">Elettrico</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="100" id="biciclette_tradizionale" name="biciclette">
+                        <label class="form-check-label" for="autovetture_tradizionale">Tradizionali</label>
+                    </div>
+                </div>
+                <div class="question-category" id="6">
+                    <p><u>Trasporto su acqua:</u> specifichi il tipo di mezzo:</p>
+                    <select name="trasporto_su_acqua" id="acqua">
+                      <option value="null">Scegli opzione</option>
+                      <option value="vela">Barca a vela</option>
+                      <option value="nave">Nave</option>
+                      <option value="yacht">Yacht</option>
+                      <option value="motoscafo">Motoscafo</option>
+                      <option value="gondola">Gondola</option>
+                      <option value="scooter_acqua">Scooter d'acqua</option>
+                    </select>
+                    <div class="form-check">    
+                        <input class="form-check-input" type="radio" value="75" id="trasporto_elettrico" name="trasporto_acqua">
+                        <label class="form-check-label" for="biciclette_tradizionale">Elettrico</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="100" id="trasporto_tradizionale" name="trasporto_acqua">
+                        <label class="form-check-label" for="biciclette_tradizionale">Tradizionali</label>
+                    </div>
+                </div>
+                <div class="question-category">
+                  <h6>Nel calcolo dei percorsi nella vostra attività si fa uso di software o 
+                    navigatori in modo da ottimizzare il viaggio e circolare in regime di risparmio e rispetto dell’ambiente?</h6>
+                  <div class="form-check">    
+                      <input class="form-check-input" type="radio" value="100" id="q9_a1" name="software">
+                      <label class="form-check-label" for="q9_a1">Si</label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" value="0" id="q9_a2" name="software">
+                      <label class="form-check-label" for="q9_a2">No</label>
+                  </div>
+              </div>
+              <div class="question-category">
+                <h6>I mezzi che sta certificando utilizzano pneumatici con etichetta energetica in classe A con caratteristiche di elevato rotolamento?</h6>
+                <div class="form-check">    
+                    <input class="form-check-input" type="radio" value="100" id="q10_a1" name="pneumatici">
+                    <label class="form-check-label" for="q10_a1">Si</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="65" id="q10_a2" name="pneumatici">
+                    <label class="form-check-label" for="q10_a2">No</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" value="75  " id="q10_a3" name="pneumatici">
+                  <label class="form-check-label" for="q10_a3">Non Tutti</label>
+              </div>
+            </div>
+            <div class="question-category">
+              <h6>Il personale conducente è stato formato alle tecniche di guida volte alla riduzione dei consumi (eco-drive)?</h6>
+              <div class="form-check">    
+                  <input class="form-check-input" type="radio" value="100" id="q11_a1" name="eco_drive">
+                  <label class="form-check-label" for="q11_a1">Si</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" value="0" id="q11_a2" name="eco_drive">
+                  <label class="form-check-label" for="q11_a2">No</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="50" id="q11_a3" name="eco_drive">
+                <label class="form-check-label" for="q11_a3">Non Tutti</label>
+            </div>
+          </div>
+          <div class="question-category">
+            <h6 class="tooltip-container">Sarebbe interessato ad un corso di <span class="tooltip-trigger" data-placement="top" title="Il mobility manager è la figura che consente di dare risposte di breve periodo ai problemi della congestione del traffico e delle sue conseguenze sulla salute.">mobility manager</span> relativamente ai mezzi che sta certificando</h6>
+          </button>
+            </h6>
+            <div class="form-check">    
+                <input class="form-check-input" type="radio" value="35" id="q12_a1" name="mobility">
+                <label class="form-check-label" for="q12_a1">Si</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" value="0 " id="q12_a2" name="mobility">
+                <label class="form-check-label" for="q12_a2">No</label>
+            </div>
+          </div>
+          <div class="question-category">
+            <h6>Sarebbe interessato ad una certificazione di secondo livello?</h6>
+            <div class="form-check">    
+                <input class="form-check-input" type="radio" value="35" id="q13_a1" name="certificazione">
+                <label class="form-check-label" for="q13_a1">Si</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" value="0" id="q13_a2" name="certificazione">
+                <label class="form-check-label" for="q13_a2">No</label>
+            </div>
+          </div>
+          <div class="question-category">
+            <h6>Sarebbe interessato a portare avanti un’attività di <span class="tooltip-trigger" data-placement="top" title="Per auditing energetico si intende quell’attività che si pone l’obiettivo di capire in che modo l’energia viene utilizzata, quali sono le cause degli eventuali sprechi ed eventualmente quali interventi possono essere suggeriti all’utente.">auditing energetico</span> per la struttura (Vs. uffici direzionali) che ha appena certificato?</h6>
+            <div class="form-check">    
+                <input class="form-check-input" type="radio" value="80" id="q14_a1" name="auditing">
+                <label class="form-check-label" for="q14_a1">Si</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" value="0" id="q14_a2" name="auditing">
+                <label class="form-check-label" for="q14_a2">No</label>
+            </div>
+          </div>
+          </div>     
+            <div class="text-center mt-3">
+              <button type="submit" id="submit" onclick="submitQuiz()" class="btn btn-outline-success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzA6Y47PCpHTI7aGmLr9a78PZrFzO3p4uhK7ARf1K/C9" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12AWAW6XVAAhGnrxPy+nIyk7+mb9fK4e1q5GpWf8Ru6v7Tw9" crossorigin="anonymous"></script>
+    <script>
+//   function calculateScore() {
+//   let score = 0;
+//   $('input[type="checkbox"]:checked, input[type="radio"]:checked').each(
+//     function () {
+//       score += parseInt($(this).val());
+//     }
+//   );
+//   console.log("Punteggio finale: " + score);
+//   return score;
+// }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const checkboxes = document.querySelectorAll(
+    '.form-group input[type="checkbox"]'
+  ); //Seleziona tutti gli input di tipo "checkbox" all'interno del form con classe "form-group"
+  // const questionCategories = document.querySelectorAll('.question-category');
+  const specificQuestionCategoryIds = [1, 2, 3, 4, 5, 6]; //Id delle categorie di domande specifiche dove i radio button devono essere disabilitati
+
+  const selectedMezzi = []; //Array per memorizzare i mezzi selezionati
+  const selectedName = {
+    //Oggetto per mappare i nomi dei mezzi con i loro identificatori
+    autobus: "autobus",
+    minibus: "minibus",
+    autovetture: "autovetture",
+    scooter: "scooter",
+    biciclette: "biciclette",
+    trasporto_acqua: "trasporto_acqua",
+  };
+
+  // Disabilita tutti i radio button nelle categorie di domande specificate
+  specificQuestionCategoryIds.forEach((id) => {
+    // Seleziona la categoria di domanda usando l'ID
+    const questionCategory = document.getElementById(id.toString());
+    if (questionCategory) {
+      // Seleziona tutti i radio button all'interno della categoria di domanda
+      const radios = questionCategory.querySelectorAll('input[type="radio"]');
+      // Disabilita ogni radio button
+      radios.forEach((radio) => {
+        radio.disabled = true;
+      });
+    }
+  });
+
+  // Aggiungi un listener per il cambiamento di stato dei checkbox
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      selectedMezzi.length = 0; //Resetta l'array dei mezzi selezionati
+      checkboxes.forEach((cb) => {
+        if (cb.checked) {
+          selectedMezzi.push(cb.name); //Aggiungi il valore del checkbox selezionato all'array
+        }
+      });
+      console.log(selectedMezzi); // Stampa l'array dei mezzi selezionati nella console
+
+      // Itera attraverso le categorie di domande specifiche
+      specificQuestionCategoryIds.forEach((id) => {
+        const questionCategory = document.getElementById(id.toString());
+        if (questionCategory) {
+          const radios = questionCategory.querySelectorAll(
+            'input[type="radio"]'
+          );
+          radios.forEach((radio) => {
+            const isEnabled = selectedMezzi.includes(selectedName[radio.name]);
+            radio.disabled = !isEnabled; // Abilita o disabilita il pulsante radio in base alla selezione del mezzo
+          });
+        }
+      });
+    });
+  });
+});
+
+function calculateScore() {
+      let score = 0;
+      $('input[type="checkbox"]:checked, input[type="radio"]:checked').each(function () {
+        score += parseInt($(this).val());
+      });
+      console.log("Punteggio finale: " + score);
+      return score;
+    }
+
+    function submitQuiz() {
+      const score = calculateScore();
+      sendScore(score);
+    }
+
+    function sendScore(score) {
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "/submit", true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      // xhr.onreadystatechange = function () {
+      //   if (xhr.readyState === 4 && xhr.status === 200) {
+      //     window.location.href = '/esito';
+      //   }
+      // };
+      xhr.send(JSON.stringify({ score: score }));
+    }
+    
+</script>
+</body>
+</html>

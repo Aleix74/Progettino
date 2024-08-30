@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>La sostenibilità in un click</title>
+    <link rel="icon" type="image/x-icon" href="greenvisalogo.png"/>
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+      crossorigin="anonymous"
+      />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <script src="progettino.js" defer></script> -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="progettino.html">
+                <img src="greenvisalogo.png" alt="Logo" width="70" height="70">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link fs-3" href="http://localhost:4000/users/login" id="authLink">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fs-3" href="http://127.0.0.1:4000/users/register">Registrati</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fs-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Informazioni
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"><!--dropdown position absolute controllare meglio-->
+                      <li><a class="dropdown-item" href="#greenvisa">Cos'è greenvisa</a></li>
+                      <li><a class="dropdown-item" href="#comefunziona">Come funziona greenvisa</a></li>
+                      <li><a class="dropdown-item" href="#perchescegliere">Perchè scegliere greenvisa</a></li>
+                      <li><a class="dropdown-item" href="#achisirivolge">A chi si rivolge greenvisa</a></li>
+                      <!-- <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row">
+                  <!-- Icons -->
+                  <li class="nav-item me-3 me-lg-0">
+                      <a class="nav-link" href="https://www.facebook.com/greenvisanetwork" target="_blank">
+                          <i class="bi bi-facebook h3"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item me-3 me-lg-0">
+                      <a class="nav-link" href="https://www.instagram.com/greenvisanetwork" target="_blank">
+                          <i class="bi bi-instagram h3"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item me-3 me-lg-0">
+                      <a class="nav-link" href="https://www.linkedin.com/company/greenvisanetwork" target="_blank">
+                          <i class="bi bi-linkedin h3"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link" href="https://www.youtube.com/@GreenVisaNetwork" target="_blank">
+                        <i class="bi bi-youtube h3"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+    </header>
+    <main class="my-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-md-12 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="differenza.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="lca.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="vacanze.jpg" alt="Third slide">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <div class="card mt-4 mt-lg-0"> <!--style="margin-top: 70px;"> -->
+                  <img src="certificati.jpg" class="card-img-top" alt="Card image">
+                  <div class="card-body">
+                    <h5 class="card-title">Certificati con noi!</h5>
+                    <a href="http://localhost:4000/quiz" target="_blank" class="btn btn-secondary">Prova quiz</a>
+                    <a id="quizScores" target="_blank" class="btn btn-secondary d-none" href="http://localhost:4000/quizResults">Punteggi</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card-group">
+                        <div class="card">
+                          <img src="cosegreen.jpg" class="card-img-top" alt="..." id="greenvisa">
+                          <div class="card-body">
+                            <h5 class="card-title">COS’È GREEN VISA</h5>
+                            <p class="card-text">Green Visa è un progetto indipendente di certificazione che dispone di una metodologia affidabile e dall’alto profilo scientifico, per la valutazione ed il riconoscimento delle best practices nell’ambito dell’economia circolare, della green economy, dell’efficienza e del risparmio energetico.
+                            C’è di più, Green Visa è un network  di imprese, associazioni e consumatori che si impegnano per diffondere la cultura della sostenibilità.</p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                            <!-- <div class="text-center">
+                                <a href="#"><button type="button" class="btn btn-primary">Primary</button></a>
+                            </div> -->
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="comefunziona.jpg" class="card-img-top" alt="..." id="comefunziona">
+                          <div class="card-body">
+                            <h5 class="card-title">COME FUNZIONA GREEN VISA</h5>
+                            <p class="card-text">La procedura per ottenere la certificazione GREEN VISA è semplice e veloce. Rispondendo ad un questionario multiple choice, riceverai una diagnosi della situazione energetico/ambientale della tua impresa e ti sarà assegnato un punteggio sulla base dei rigorosi protocolli scientifici elaborati dai nostri esperti.
+
+                              Successivamente, potrai acquisire la tua certificazione e riceverai una targa da esibire all’ingresso della tua struttura e tutto il materiale necessario a far conoscere online e offline il tuo impegno green.
+                              
+                              Il nostro staff sarà sempre a tua disposizione e ti seguirà passo dopo passo.</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>  
+            </div>
+            
+              <div class="row">
+                <div class="col">
+                  <div class="card-group">
+                        <div class="card">
+                          <img src="perche.jpg" class="card-img-top" alt="..." id="perchescegliere">
+                          <div class="card-body">
+                            <h5 class="card-title">PERCHÉ SCEGLIERE GREEN VISA</h5>
+                            <p class="card-text">Sempre più consumatori chiedono alle imprese di evolversi e abbattere l’impronta ambientale delle loro attività.
+                              L’impegno per la sostenibilità è uno dei fattori che orientano il consumatore nella scelta di un bene o di un servizio.
+                              
+                              La certificazione GREEN VISA, altamente riconoscibile, intuitiva e, al tempo stesso, rigorosa da un punto di vista tecnico-scientifico, 
+                              consente alle imprese di comunicare in modo semplice il proprio impegno per la sostenibilità.</p>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="achisirivolge.jpg" class="card-img-top" alt="..." id="achisirivolge">
+                          <div class="card-body">
+                            <h5 class="card-title">A CHI SI RIVOLGE GREEN VISA</h5>
+                            <p class="card-text">Il comitato scientifico GREEN VISA ha elaborato un protocollo specifico per ogni settore economico.
+
+                              Tenendo conto delle specificità di ogni differente attività imprenditoriale, GREEN VISA valuta con parametri riconosciuti a livello internazionale l’impatto ambientale di ogni realtà produttiva.
+                              
+                              Con GREEN VISA tutti possono raccontare i propri progressi nella transizione ecologica.</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="container my-5">
+                <h2 class="text-center mb-4">Le Nostre Notizie</h2>
+                <div class="row">
+                  <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card news-card">
+                      <img src="card notizie 2.jpg" class="card-img-top" alt="News Image 1">
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">L’Importanza della compensazione delle Emissioni di CO₂</h5>
+                        <p class="card-text flex-grow-1">Le emissioni di anidride carbonica (CO₂)...</p>
+                        <a href="#" class="btn btn-primary mt-auto">Leggi di più</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card news-card">
+                      <img src="card notizie 3.jpg" class="card-img-top" alt="News Image 2">
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Il ruolo dell’Intelligenza Artificiale nella Transizione Ecologica</h5>
+                        <p class="card-text flex-grow-1">Negli ultimi decenni, l’umanità...</p>
+                        <a href="#" class="btn btn-primary mt-auto">Leggi di più</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card news-card">
+                      <img src="card notizie.jpg" class="card-img-top" alt="News Image 3">
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Economia circolare e gestione dei rifiuti nell’industria alberghiera </h5>
+                        <p class="card-text flex-grow-1">L’industria alberghiera, storicamente...</p>
+                        <a href="#" class="btn btn-primary mt-auto">Leggi di più</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+    </main>
+    <footer class="footer mt-auto py-3 bg-dark">
+      <div class="container d-flex align-items-center">
+        <span class="text-white">Hai bisogno di aiuto? <a href="#">Clicca qui</a></span>
+        <ul class="navbar-nav d-flex flex-row ms-auto">
+          <!-- Icons -->
+          <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.facebook.com/greenvisanetwork" target="_blank">
+                  <i class="bi bi-facebook h3"></i>
+              </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.instagram.com/greenvisanetwork" target="_blank">
+                  <i class="bi bi-instagram h3"></i>
+              </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.linkedin.com/company/greenvisanetwork" target="_blank">
+                  <i class="bi bi-linkedin h3"></i>
+              </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="https://www.youtube.com/@GreenVisaNetwork" target="_blank">
+                <i class="bi bi-youtube h3"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- https://greenvisa.org/wp-content/uploads/2024/02/pexels-karolina-grabowska-4202918.jpg  -->
+    </footer>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous" 
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Mk5b6Zj9lROErsDkW1VJ8ELT0JAY" crossorigin="anonymous"></script>
+  <script>
+fetch('http://localhost:4000/api/user', {
+  method: 'GET',
+  credentials: 'include', // Necessario per inviare i cookie di sessione
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok ' + response.statusText);
+  }
+  return response.json();
+})
+.then(data => {
+  console.log(data);
+  if (data.userType === 'super_user') {
+    document.getElementById('quizScores').classList.remove('d-none');
+  }
+
+  // Modifica il link di Login in Logout se l'utente è loggato
+  const authLink = document.getElementById('authLink');
+  if (data.username) {  // Verifica se l'utente è loggato
+    authLink.textContent = 'Logout';
+    authLink.href = 'http://localhost:4000/users/logout'; // Cambia l'URL al logout
+  }
+})  
+.catch(error => {
+  console.error('There has been a problem with your fetch operation:', error);
+});
+</script>
+</body>
+</html>
+<!--
+// fetch('http://localhost:4000/api/user', {
+//   credentials: 'include' // Assicura che i cookie siano inclusi nelle richieste
+// })
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data)
+//     if (data.userType === 'super_user') {
+//       document.getElementById('quizScores').classList.remove('d-none');
+//     }
+//   })
+//   .catch(error => console.error('Errore:', error));
+  // document.addEventListener("DOMContentLoaded", function() {
+    //     // Effettua una richiesta all'API per ottenere il tipo di utente
+    //     fetch('http://localhost:4000/api/user', {
+    //         credentials: 'include' // Include i cookie per mantenere l'utente autenticato
+    //     }) 
+    //     .then(response => {
+    //         if (!response.ok) {
+    //             throw new Error('Network response was not ok');
+    //         }
+    //         return response.json();
+    //     })
+    //     .then(data => {
+    //         const quizScoresButton = document.getElementById('quizScores');
+    //         if (data.userType === 'super_user') {
+    //             quizScoresButton.classList.remove('d-none'); // Mostra il pulsante "Punteggi" se l'utente è un super_user
+    //         }
+    //     })
+    //     .catch(error => console.error('Error fetching user type:', error));
+    // });
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     fetch('http://localhost:4000/api/user', { // Cambia la porta se necessario
+    //         method: 'POST',
+    //         credentials: 'include' // Include cookie e sessioni per mantenere l'utente autenticato
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         const quizScoresButton = document.getElementById('quizScores');
+    //         if (data.userType === 'super_user') {
+    //           quizScoresButton.classList.remove('d-none'); // Mostra il pulsante "Punteggi" se l'utente è un super_user
+    //         }
+    //     })
+    //     .catch(error => console.error('Error fetching user type:', error));
+    // });
+//   document.getElementById('loginForm').addEventListener('submit', async (event) => {
+//   event.preventDefault(); // Impedisce il comportamento predefinito del form
+
+//   const email = document.getElementById('email').value;
+//   const password = document.getElementById('password').value;
+
+//   try {
+//     const response = await fetch('http://localhost:4000/users/login', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({ email, password }),
+//     });
+
+//     if (response.ok) {
+//       const data = await response.json();
+//       // Memorizza il token nel localStorage
+//       localStorage.setItem('authToken', data.token);
+//       // Reindirizza alla dashboard o esegui altre azioni
+//       window.location.href = 'http://127.0.0.1:5500/dashboard.html';
+//     } else {
+//       const errorData = await response.json();
+//       alert(errorData.message || 'Login fallito');
+//     }
+//   } catch (error) {
+//     console.error('Errore durante la richiesta di login:', error);
+//     alert('Errore durante la richiesta di login');
+//   }
+// });
+ document.addEventListener("DOMContentLoaded", function() {
+        // Funzione per ottenere un cookie specifico
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        const userType = getCookie('userType'); // Ottieni il valore del cookie 'userType'
+        console.log(userType)
+
+        const quizScoresButton = document.getElementById('quizScores');
+        if (userType === 'super_user') {
+            quizScoresButton.classList.remove('d-none'); // Mostra il pulsante "Punteggi" se l'utente è un super_user
+        }
+    });
+// fetch('/api/user')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     if (data.userType === 'super_user') {
+    //       // Show the "Punteggi" link
+    //       document.getElementById('quizScores').classList.remove('d-none');
+    //     } else {
+    //       // Keep the "Punteggi" link hidden
+    //       document.getElementById('quizScores').classList.add('d-none');
+    //     }
+    //   }); 
+//   async function getUserType() {
+   //   try {
+  //     const response = await fetch('/api/user');
+  //     const data = await response.json();
+  //     const userType = data.type;
+  //     console.log(userType);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
+    // document.addEventListener("DOMContentLoaded", function() {
+        // const userType = localStorage.getItem('userType');
+        // console.log("Retrieved userType from localStorage:", userType); // Debugging
+        // const quizScoresLink = document.getElementById("quizScores");
+
+        // if (userType === 'super_user') {
+        //     console.log("User is super_user, showing quizScoresLink"); // Debugging
+        //     quizScoresLink.classList.remove('d-none');
+        // } else {
+        //     console.log("User is not super_user"); // Debugging
+        // }
+    //     setTimeout(() => {
+    //             const userType = localStorage.getItem('userType');
+    //             console.log("Retrieved userType from localStorage:", userType); // Debugging
+    //             const quizScoresLink = document.getElementById("quizScores");
+
+    //             if (userType === 'super_user') {
+    //                 console.log("User is super_user, showing quizScoresLink"); // Debugging
+    //                 quizScoresLink.classList.remove('d-none');
+    //             } else {
+    //                 console.log("User is not super_user"); // Debugging
+    //             }
+    //         }, 200); // Ritardo di 200 millisecondi
+    // }); -->
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const userType = localStorage.getItem('userType');
+        console.log("Retrieved userType from localStorage:", userType); // Debugging
+        const quizScoresLink = document.getElementById("quizScores");
+        console.log(localStorage.getItem('userType'));
+
+        if (userType === 'super_user') {
+            console.log("User is super_user, showing quizScoresLink"); // Debugging
+            quizScoresLink.classList.remove('d-none');
+        } else {
+            console.log("User is not super_user"); // Debugging
+        }
+    });
+</script> -->
+
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("ao")
+        const userType = localStorage.getItem('userType');
+        const quizScoresLink = document.getElementById("quizScores");
+        console.log("ugauga")
+
+        if (userType === 'super_user') {
+          console.log("sium") 
+            quizScoresLink.classList.remove('d-none');
+        }
+        else {
+          console.log("User frocio");
+        }
+    });
+</script> -->
+
+  <!-- <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const quizScoresButton = document.getElementById("quizScoresButton");
+
+  // Mostra il bottone se l'utente è un super_user
+  function showQuizScoresButton() {
+    // Implementa la logica per determinare se l'utente è un super_user
+    // Per esempio, verificando un valore di sessione o una variabile globale
+    const userType = 'super_user'; // Sostituisci con la logica effettiva
+    if (userType === 'super_user') {
+      quizScoresButton.classList.remove('d-none');
+    }
+  }
+
+  // Gestisci il click sul bottone
+  quizScoresButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Previene il comportamento predefinito del link
+    window.location.href = '/users/quizResults'; // Redirige alla pagina dei risultati dei quiz
+  });
+
+  showQuizScoresButton(); // Chiama la funzione per mostrare il bottone se necessario
+});
+  </script>   -->
+
+ <!-- <script src="quiz.js"></script> -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+<!-- 1 Carousel animation: Add a smooth animation effect to your carousel when the user navigates between slides. You can use JavaScript to animate the carousel's transition.
+    2 Quiz functionality: Implement a quiz feature that allows users to answer questions and receive a score or feedback. You can use JavaScript to create a quiz logic, store user answers, and display results.
+3 Modal windows: Create modal windows that appear when users click on certain elements, such as the "Prova quiz" button. You can use JavaScript to create and manage modal windows.
+4 Scroll-to-top button: Add a button that allows users to scroll back to the top of the page. You can use JavaScript to create a smooth scrolling effect.
+5 News card hover effect: Add a hover effect to your news cards that reveals more information or a brief summary of the article. You can use JavaScript to create a hover effect and display additional content.
+6 Social media sharing: Implement social media sharing buttons that allow users to share your content on various platforms. You can use JavaScript to create sharing buttons and handle sharing functionality.
+7 Form validation: Add form validation to your login and quiz forms to ensure users enter valid data. You can use JavaScript to validate form inputs and display error messages.
+8 Animated counters: Create animated counters that display statistics or metrics, such as the number of certified companies or users. You can use JavaScript to animate the counters and update the values.
+10 Accessibility features: Implement accessibility features, such as keyboard navigation or screen reader support, to make your website more usable for users with disabilities. You can use JavaScript to create and manage these accessibility features. 
+
+The two scripts at the end of your HTML file are:
+
+popper.min.js: This script is a dependency of Bootstrap, and it provides the functionality for tooltips, popovers, and other interactive elements. Popper is a JavaScript library that helps with positioning and styling of these elements.
+bootstrap.min.js: This script is the main Bootstrap JavaScript file, which provides the functionality for all the Bootstrap components, such as the navbar, carousel, modal, and more. It builds upon the foundation laid by Popper
+
+These two scripts are necessary to enable the interactive features of Bootstrap in your web page. As for the two links at the beginning of your HTML file, they are:
+
+bootstrap.min.css: This link imports the Bootstrap CSS file, which provides the styles for all the Bootstrap components. This file is responsible for the visual styling of your web page.
+bootstrap-icons.min.css: This link imports the Bootstrap Icons CSS file, which provides the styles for the icons used in Bootstrap components, such as the Facebook, Instagram, LinkedIn, and YouTube icons in your footer.-->
